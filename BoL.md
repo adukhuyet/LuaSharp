@@ -1,23 +1,15 @@
 # CallBacks
-OnLoad()
-
-OnDraw()
-
-OnTick()
-
-OnUnload()
-
-OnCreateObj(object)
-
-OnDeleteObj(object)
-
-OnWndMsg(msg,wParam)
-
-OnProcessSpell(object,spellProc)
-
-OnSendChat(text)
-
-OnReset()
+| Function                         | Status | Working |
+| -------------------------------- |:------:|:-------:|
+| OnLoad()                         |  Done  | Unknown |
+| OnDraw()                         |  Done  | Unknown |
+| OnUnload()                       |  Done  | Unknown |
+| OnCreateObj(object)              |        | Unknown |
+| OnDeleteObj(object)              |        | Unknown |
+| OnWndMsg(msg,wParam)             |        | Unknown |
+| OnProcessSpell(object,spellProc) |        | Unknown |
+| OnSendChat(text)                 |        | Unknown |
+| OnReset()                        |        | Unknown |
 
 # Globals
 ## Functions
