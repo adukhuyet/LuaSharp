@@ -3,13 +3,13 @@
 | -------------------------------- |:------:|:-------:|
 | OnLoad()                         |  Done  | Unknown |
 | OnDraw()                         |  Done  | Unknown |
-| OnUnload()                       |  Done  | Unknown |
-| OnCreateObj(object)              |        | Unknown |
-| OnDeleteObj(object)              |        | Unknown |
-| OnWndMsg(msg,wParam)             |        | Unknown |
-| OnProcessSpell(object,spellProc) |        | Unknown |
-| OnSendChat(text)                 |        | Unknown |
-| OnReset()                        |        | Unknown |
+| OnUnload()                       |  TODO  | ------- |
+| OnCreateObj(object)              |  Done  | Unknown |
+| OnDeleteObj(object)              |  Done  | Unknown |
+| OnWndMsg(msg,wParam)             |  Done  | Unknown |
+| OnProcessSpell(object,spellProc) |  Done  | Unknown |
+| OnSendChat(text)                 |  Done  | Unknown |
+| OnReset()                        |  TODO  | ------- |
 
 # Globals
 ## Functions
