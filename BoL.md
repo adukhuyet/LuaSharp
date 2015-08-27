@@ -1,15 +1,15 @@
 # CallBacks
-| Function                         | Status | Working |
-| -------------------------------- |:------:|:-------:|
-| OnLoad()                         |  Done  | Unknown |
-| OnDraw()                         |  Done  | Unknown |
-| OnUnload()                       |  TODO  | ------- |
-| OnCreateObj(object)              |  Done  | Unknown |
-| OnDeleteObj(object)              |  Done  | Unknown |
-| OnWndMsg(msg,wParam)             |  Done  | Unknown |
-| OnProcessSpell(object,spellProc) |  Done  | Unknown |
-| OnSendChat(text)                 |  Done  | Unknown |
-| OnReset()                        |  TODO  | ------- |
+| Function                         |   Status   | Working |
+| -------------------------------- |:----------:|:-------:|
+| OnLoad()                         |Done      | Unknown    |
+| OnDraw()                         |Done      | Unknown    |
+| OnUnload()                       |**TODO**  | Unfinished |
+| OnCreateObj(object)              |Done      | Unknown    |
+| OnDeleteObj(object)              |Done      | Unknown    |
+| OnWndMsg(msg,wParam)             |Done      | Unknown    |
+| OnProcessSpell(object,spellProc) |Done      | Unknown    |
+| OnSendChat(text)                 |Done      | Unknown    |
+| OnReset()                        |**TODO**  | Unfinished |
 
 # Globals
 ## Functions
