@@ -1,0 +1,64 @@
+﻿CallBacks
+--------------------------------------------------------------
+OnLoad() -- Done
+OnDraw() -- Done
+OnTick() -- Done
+OnUnload()
+OnCreateObj(object) -- Done
+OnDeleteObj(object) -- Done
+OnWndMsg(msg,wParam) -- Done
+OnProcessSpell(object,spellProc) -- Done
+OnSendChat(text) -- Done
+OnReset()
+
+Globals
+--------------------------------------------------------------
+
+EnableZoomHack() -- Enable the zoom hack
+
+IsKeyPressed(wParam) -- Returns true/false is key was pressed
+IsKeyDown(wParam) -- Returns true/false is key is down
+
+CastSpell(iSpell) -- Done
+CastSpell(iSpell,x,z) -- Done
+CastSpell(iSpell,target) -- Done
+LevelSpell(iSpell) -- Done
+
+PrintChat(text) -- Done
+SendChat(text) -- Done
+BlockChat() -- Blocks last SendChat()
+
+DrawText(text,size,x,y,ARGB) -- Done
+DrawLine(x1, y1, x2, y2, size, ARGB) -- Done
+DrawRectangle(x, y, width, height, ARGB) -- Draw rectangle over Screen
+
+DrawCircle(x,y,z,size,RGB) -- Done
+PrintFloatText(target,iMode,text) -- Prints a float text above ingame object
+PingSignal(iMode,x,y,z,bPing) -- Verify
+
+GetMyHero() -- Done
+GetTarget() -- Need to verify
+GetTickCount() -- Done
+GetLatency() -- Done
+GetCursorPos() -- Done
+WorldToScreen(unit) -- Need to verify
+SetTarget(unit) -- Need to verify
+
+createSprite(szFile) -- return sprite object, loads file from "Sprites" folder
+
+CLoLPacket(header) -- Return new LoLPacket
+SendPacket(LoLPacket) -- Send a LoLPacket
+
+BuyItem(itemID) -- Done
+SellItem(iSlot) -- Done
+IsItemPurchasable(itemID) -- Returns purchase state (true/false).
+IsRecipePurchasable(recipeID) -- Returns purchase state (true/false).
+
+DrawArrow(pos,arrowDir,fIdk1,fWidth,fIdk2,dwColor)
+IsWallOfGrass(pos) -- Done
+UpdateWindow() -- updates WINDOW_[X/Y/W/H]
+GetKey(hotkey) -- same as string.byte(...)
+RGBA(r,g,b,a)
+RGB(r,g,b )
+KillProcess(procName) -- Done
+GetGameTimer() -- Need to verify
