@@ -1,6 +1,12 @@
+# Help me
+These are functions that I have NO idea what they do and what they return
+| Function                         |
+| -------------------------------- |
+|                                  |
+
 # CallBacks
-| Function                         |   Status   | Working |
-| -------------------------------- |:----------:|:-------:|
+| Function                         |  Status  | Working    |
+| -------------------------------- |:--------:|:----------:|
 | OnLoad()                         |Done      | Unknown    |
 | OnDraw()                         |Done      | Unknown    |
 | OnUnload()                       |**TODO**  | Unfinished |
