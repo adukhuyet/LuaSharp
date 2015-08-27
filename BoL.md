@@ -1,8 +1,9 @@
 # Help me
 These are functions that I have NO idea what they do and what they return
+
 | Function                         | Type |
-| -------------------------------- | ---- |
-|  asdf                            |      |
+|----------------------------------|:----:|
+|                                  |      |
 |                                  |      |
 |                                  |      |
 |                                  |      |
