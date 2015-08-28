@@ -2,6 +2,7 @@
 
 using System;
 using System.Globalization;
+using LeagueSharp.Common;
 using LuaSharp.Classes;
 using MoonSharp.Interpreter;
 using SharpDX;
@@ -27,7 +28,22 @@ namespace LuaSharp.Core.API.Drawing
 
             script.Globals["DrawLine"] = (Action<float, float, float, float, float, ARGB>) DrawLine;
             script.Globals["DrawLine"] = (Action<float, float, float, float, float, uint>) DrawLine;
-            
+
+            script.Globals["DrawRectangle"] = (Action<float, float, float, float, ARGB>) DrawRectangle;
+            script.Globals["DrawRectangle"] = (Action<float, float, float, float, uint>)DrawRectangle;
+
+        }
+
+
+
+        private static void DrawRectangle(float x, float y, float width, float height, ARGB color)
+        {
+            new Render.Rectangle((int)x, (int)y, (int)width, (int)height, new ColorBGRA(color.ToSystemColor().ToArgb())).Add();
+        }
+
+        private static void DrawRectangle(float x, float y, float width, float height, uint color)
+        {
+            new Render.Rectangle((int)x, (int)y, (int)width, (int)height, new ColorBGRA(color)).Add();
         }
 
         private static ARGB MakeARGB(int r, int g, int b, int a)
