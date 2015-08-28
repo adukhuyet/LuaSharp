@@ -1,13 +1,31 @@
-﻿using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using LeagueSharp;
 using LeagueSharp.Common;
+using SharpDX;
 
 namespace LuaSharp.Classes
 {
+    [SuppressMessage("ReSharper", "InconsistentNaming")]
+    [SuppressMessage("ReSharper", "ConvertPropertyToExpressionBody")]
     internal class GameUnit
     {
+        public GameUnit(Obj_AI_Base unit)
+        {
+            Unit = unit;
+        }
+
+        public GameUnit(GameObject unit)
+        {
+            foreach (var player in ObjectManager.Get<Obj_AI_Hero>().Where(h => h.IsValid && !h.IsMe).Where(players => players.Name == unit.Name))
+            {
+                Unit = player;
+            }
+        }
+
         public Obj_AI_Base Unit { get; private set; }
 
+        #region Members
         public string name
         {
             get { return Unit.CharData.BaseSkinName; }
@@ -352,18 +370,52 @@ namespace LuaSharp.Classes
         {
             get { return Unit.CharacterState == GameObjectCharacterState.ForceRenderParticles; }
         }
+        #endregion
 
-        public GameUnit(Obj_AI_Base unit)
+        #region methods
+        public void HoldPosition()
         {
-            Unit = unit;
+            ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, ObjectManager.Player.Position);
         }
 
-        public GameUnit(GameObject unit)
+        public void MoveTo(float x, float y)
         {
-            foreach (var player in ObjectManager.Get<Obj_AI_Hero>().Where(h => h.IsValid && !h.IsMe).Where(players => players.Name == unit.Name))
-            {
-                Unit = player;
-            }
+            ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, new Vector2(x, y).To3D(), false);
         }
+
+        public void Attack(GameUnit unit)
+        {
+            ObjectManager.Player.IssueOrder(GameObjectOrder.AttackUnit, unit.Unit);
+        }
+
+        public float GetDistance(GameUnit unit)
+        {
+            return unit.Unit.Position.Distance(Unit.Position);
+        }
+
+        public string getBuff(int index)
+        {
+            return index >= Unit.Buffs.Count() ? Unit.Buffs[index - 1].Name : "";
+        }
+
+        public int getInventorySlot(SpellSlot slot)
+        {
+            return Unit.InventoryItems.Where(item => item.SpellSlot == slot).Select(item => (int) item.Id).FirstOrDefault();
+        }
+
+        //Can someone tell me what these things do?
+        /*
+        public float CalcDamage(GameUnit unit)
+        {
+            return unit.damage;
+        }
+        public float CalcMagicDamage(GameUnit unit)
+        {
+            return unit.damage;
+        }
+        //*/
+
+
+        #endregion
     }
 }

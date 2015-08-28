@@ -11,7 +11,6 @@ namespace LuaSharp.Core.API.Unit
     {
         public static void AddApi(Script script)
         {
-            UserData.RegisterType<GameUnit>();
 
             #region Spells 'n stuff
             script.Globals["_Q"] = SpellSlot.Q;

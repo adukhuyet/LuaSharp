@@ -21,10 +21,10 @@ namespace LuaSharp.Core.API
             script.Globals["SendChat"] = (Action<string>) Game.Say;
 
             //Add API's
+            HeroApi.AddApi(script);
             DrawingApi.AddApi(script);
             UtilApi.AddApi(script);
             UnitApi.AddApi(script);
-            HeroApi.AddApi(script);
         }
 
         private static void CallFunc(string funcName)

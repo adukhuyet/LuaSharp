@@ -1,5 +1,6 @@
 ﻿using System;
 using LeagueSharp;
+using LuaSharp.Classes;
 using MoonSharp.Interpreter;
 using SharpDX;
 
@@ -23,23 +24,10 @@ namespace LuaSharp.Core.API.Hero
     {
         public static void AddApi(Script script)
         {
-            script.Globals["unit:HoldPosition"] = (Action) HoldPos;
-            script.Globals["unit:MoveTo"] = (Action<float, float>) MoveTo;
-        }
-
-        private static void HoldPos()
-        {
-            ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, ObjectManager.Player.Position);
-        }
-
-        private static void MoveTo(float x, float y)
-        {
-            ObjectManager.Player.IssueOrder(GameObjectOrder.MoveTo, new Vector3(x, y, ObjectManager.Player.Position.Z));
-        }
-
-        private static void Attack()
-        {
-            
+            UserData.RegisterType<GameUnit>();
+            var unit = UserData.Create(new GameUnit(ObjectManager.Player));
+            //script.Globals.Set("unit", unit);
+            script.Globals.Set("myHero", unit);
         }
     }
 }
