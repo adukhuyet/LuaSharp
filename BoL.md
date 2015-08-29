@@ -8,6 +8,12 @@ I have added more functions for users who wish to start programming for leaguesh
 This project is experemental. There may be undocumented features with using this program. The function's will tell you if you if they are working as expected (Tested in games).
 
 If anything does not work please submit an issue.
+Please include the params and what it returns
+
+Example: GetIfObjectAtPos(int x, int y) 
+- x and y are the cordinates 
+- Returns a target if they exist at that position
+
 
 # Help me
 These are functions that I have NO idea what they do and what they return
