@@ -1,5 +1,24 @@
+# LuaSharp
+Full api reference to luasharp
+
+LuaSharp's api is based on bol's api. 
+
+I have added more functions for users who wish to start programming for leaguesharp with a bol background.
+
+This project is experemental. There may be undocumented features with using this program. The function's will tell you if you if they are working as expected (Tested in games).
+
+If anything does not work please submit an issue.
+Please include the params and what it returns
+
+Example: GetIfObjectAtPos(int x, int y) 
+- x and y are the cordinates 
+- Returns a target if they exist at that position
+
+
 # Help me
 These are functions that I have NO idea what they do and what they return
+
+If I am missing functions, please submit an issue.
 
 | Function                         | Type |
 |----------------------------------|:----:|
@@ -64,5 +83,32 @@ These are functions that I have NO idea what they do and what they return
 | KillProcess(procName)                               |Done      |Unknown     |
 | GetGameTimer()                                      |Done      |Unknown     |
 
+### Custom Functions
+| Function                                                 | What it does                | Working    |
+| -------------------------------------------------------- | ----------------------------|:----------:|
+| DrawPoint(float x, float y, float thickness, ARGB color) | Draws a point on the screen | Unfinished |
+| DrawPoint(float x, float y, float thickness, uint color) | Draws a point on the screen | Unfinished |
+
 <!--|                                                     |          |            |-->
 ##Members
+| Member Name |  State  |
+|:-----------:|:-------:|
+| objManager  | Unknown |
+| heroManager | Unknown |
+| mousePos    | Unknown |
+| cameraPos   | Unknown |
+
+
+### objManager Instance
+#### Members
+| Instance Member Name |  State  |
+|:--------------------:|:-------:|
+|objManager.maxObjects | Unknown |
+|objManager.iCount     | Unknown |
+
+#### Methods
+| Methods Member Name         |  State  | Returns     |
+|:---------------------------:|:-------:|:-----------:|
+|objManager:getObject(iIndex) | Unknown |unit (object)|
+
+### heroManager Instance
