@@ -1,6 +1,8 @@
 # Help me
 These are functions that I have NO idea what they do and what they return
 
+If I am missing functions, please submit an issue.
+
 | Function                         | Type |
 |----------------------------------|:----:|
 |                                  |      |
@@ -66,3 +68,23 @@ These are functions that I have NO idea what they do and what they return
 
 <!--|                                                     |          |            |-->
 ##Members
+| Member Name |  State  |
+|:-----------:|:-------:|
+| objManager  | Unknown |
+| heroManager | Unknown |
+| mousePos    | Unknown |
+| cameraPos   | Unknown |
+
+### objManager Instance
+#### Members
+| Instance Member Name |  State  |
+|:--------------------:|:-------:|
+|objManager.maxObjects | Unknown |
+|objManager.iCount     | Unknown |
+
+#### Methods
+| Methods Member Name         |  State  | Returns     |
+|:---------------------------:|:-------:|:-----------:|
+|objManager:getObject(iIndex) | Unknown |unit (object)|
+
+### heroManager Instance
