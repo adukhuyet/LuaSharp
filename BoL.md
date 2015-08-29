@@ -82,6 +82,7 @@ If I am missing functions, please submit an issue.
 | -------------------------------------------------------- | ----------------------------|:----------:|
 | DrawPoint(float x, float y, float thickness, ARGB color) | Draws a point on the screen | Unfinished |
 | DrawPoint(float x, float y, float thickness, uint color) | Draws a point on the screen | Unfinished |
+
 <!--|                                                     |          |            |-->
 ##Members
 | Member Name |  State  |
