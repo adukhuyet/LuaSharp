@@ -11,9 +11,7 @@ namespace LuaSharp.Core.API.Packets
     {
         public static void AddApi(Script script)
         {
-            
+
         }
-
-
     }
 }

@@ -32,9 +32,19 @@ namespace LuaSharp.Core.API.Drawing
             script.Globals["DrawRectangle"] = (Action<float, float, float, float, ARGB>) DrawRectangle;
             script.Globals["DrawRectangle"] = (Action<float, float, float, float, uint>)DrawRectangle;
 
+            script.Globals["DrawPoint"] = (Action<float, float, float, uint>) DrawPoint;
+            script.Globals["DrawPoint"] = (Action<float, float, float, ARGB>) DrawPoint;
         }
 
+        private static void DrawPoint(float x, float y, float thickness, ARGB color)
+        {
+            LeagueSharp.Drawing.DrawLine(new Vector2(x, y), new Vector2(x, y), thickness, color.ToSystemColor());
+        }
 
+        private static void DrawPoint(float x, float y, float thickness, uint color)
+        {
+            LeagueSharp.Drawing.DrawLine(new Vector2(x, y), new Vector2(x, y), thickness, ReadColor(color));
+        }
 
         private static void DrawRectangle(float x, float y, float width, float height, ARGB color)
         {
