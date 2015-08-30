@@ -14,10 +14,14 @@ namespace LuaSharp.Classes
         public Menu Menu;
         public MenuConfig(string name, string intName, Menu menu = null)
         {
-            Menu = menu ?? new Menu(name, intName, true);
-
             if (menu == null)
-                Menu.AddToMainMenu();
+            {
+                (Menu = new Menu(name, intName)).AddToMainMenu();
+            }
+            else
+            {
+                Menu = menu;
+            }
         }
 
         public void addParam(string intName, string name, MenuSetting settings, params object[] para)

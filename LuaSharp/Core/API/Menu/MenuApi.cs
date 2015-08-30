@@ -13,14 +13,13 @@ namespace LuaSharp.Core.API.Menu
         public static void AddApi(Script script)
         {
             UserData.RegisterType<MenuConfig>();
+            script.Globals["scriptConfig"] = (Func<string, string, MenuConfig>) scriptConfig;
             script.Globals["SCRIPT_PARAM_SLICE"] = MenuSetting.Slider;
             script.Globals["SCRIPT_PARAM_ONOFF"] = MenuSetting.OnOff;
             script.Globals["SCRIPT_PARAM_ONKEYDOWN"] = MenuSetting.KeyDown;
             script.Globals["SCRIPT_PARAM_ONKEYTOGGLE"] = MenuSetting.KeyToggle;
             script.Globals["SCRIPT_PARAM_COLOR"] = MenuSetting.Color;
             script.Globals["SCRIPT_PARAM_INFO"] = MenuSetting.Info;
-
-            script.Globals["scriptConfig"] = (Func<string, string, MenuConfig>) scriptConfig;
         }
 
         private static MenuConfig scriptConfig(string name, string intName)
