@@ -26,7 +26,6 @@ namespace LuaSharp.Core.API.Hero
         {
             UserData.RegisterType<GameUnit>();
             var unit = UserData.Create(new GameUnit(ObjectManager.Player));
-            //script.Globals.Set("unit", unit);
             script.Globals.Set("myHero", unit);
         }
     }

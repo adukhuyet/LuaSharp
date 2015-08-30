@@ -57,10 +57,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\GameUnit.cs" />
+    <Compile Include="Classes\MenuConfig.cs" />
     <Compile Include="Classes\Position.cs" />
     <Compile Include="Core\API\ApiHandler.cs" />
     <Compile Include="Core\API\Drawing\DrawingApi.cs" />
     <Compile Include="Core\API\Hero\HeroApi.cs" />
+    <Compile Include="Core\API\Menu\MenuApi.cs" />
+    <Compile Include="Core\API\Menu\MenuSetting.cs" />
     <Compile Include="Core\API\Packets\PacketApi.cs" />
     <Compile Include="Core\API\Unit\UnitApi.cs" />
     <Compile Include="Core\API\Util\UtilApi.cs" />

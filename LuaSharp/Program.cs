@@ -9,6 +9,7 @@ namespace LuaSharp
 {
     class Program
     {
+        private static Menu _menu;
         static void Main(string[] args)
         {
             CustomEvents.Game.OnGameLoad += GameOnOnGameLoad;
@@ -30,6 +31,8 @@ namespace LuaSharp
             Obj_AI_Base.OnProcessSpellCast += ApiHandler.OnProcessSpellCast;
             Game.OnInput += ApiHandler.OnSendChat;
             Game.OnSendPacket += ApiHandler.OnSendPacket;
+            (_menu = new Menu("LuaSharp", "luasharp", true)).AddToMainMenu();
+            _menu.AddItem(new MenuItem("enabled", "Enabled").SetValue(false));
 
             Game.PrintChat("LuaSharp based off bridge of london is loaded");
         }
