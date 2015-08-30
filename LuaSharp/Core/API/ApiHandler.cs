@@ -6,6 +6,7 @@ using MoonSharp.Interpreter;
 using LuaSharp.Core;
 using LuaSharp.Core.API.Drawing;
 using LuaSharp.Core.API.Hero;
+using LuaSharp.Core.API.Menu;
 using LuaSharp.Core.API.Packets;
 using LuaSharp.Core.API.Util;
 using LuaSharp.Core.API.Unit;
@@ -22,6 +23,7 @@ namespace LuaSharp.Core.API
             script.Globals["SendChat"] = (Action<string>) Game.Say;
 
             //Add API's
+            MenuApi.AddApi(script);
             PacketApi.AddApi(script);
             HeroApi.AddApi(script);
             DrawingApi.AddApi(script);
