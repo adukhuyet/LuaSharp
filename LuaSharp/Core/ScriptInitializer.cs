@@ -5,6 +5,7 @@ using System.Linq;
 using LeagueSharp.Common;
 using LuaSharp.Core.API;
 using MoonSharp.Interpreter;
+using MoonSharp.Interpreter.Loaders;
 
 namespace LuaSharp.Core
 {
@@ -29,6 +30,7 @@ namespace LuaSharp.Core
             {
                 var script = new Script();
                 ApiHandler.AddApi(script);
+                ((ScriptLoaderBase)script.Options.ScriptLoader).ModulePaths = new[] { RootLibScriptDir + "/?", RootLibScriptDir + "/?.lua" };
 
                 //Get each lib file, and load it to the script
                 foreach (var libFile in Directory.GetFiles(RootLibScriptDir))
