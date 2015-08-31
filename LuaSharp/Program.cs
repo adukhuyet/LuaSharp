@@ -12,10 +12,10 @@ namespace LuaSharp
         private static Menu _menu;
         static void Main(string[] args)
         {
-            CustomEvents.Game.OnGameLoad += GameOnOnGameLoad;
+            Game.OnStart += GameOnOnGameLoad;
 
             // Setup load event for the Lua API
-            CustomEvents.Game.OnGameLoad += ApiHandler.OnGameLoad;
+            Game.OnStart += ApiHandler.OnGameLoad;
         }
         private static void GameOnOnGameLoad(EventArgs args)
         {

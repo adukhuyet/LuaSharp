@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LuaSharp.Classes;
 using MoonSharp.Interpreter;
+using MoonSharp.Interpreter.Loaders;
 
 namespace LuaSharp.Core.API.Menu
 {
