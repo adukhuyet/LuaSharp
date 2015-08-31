@@ -29,7 +29,6 @@ namespace LuaSharp.Core
             foreach (var scriptFile in Directory.GetFiles(RootScriptDir))
             {
                 var script = new Script();
-                script.Options.ScriptLoader = new EmbeddedResourcesScriptLoader();
                 ((ScriptLoaderBase)script.Options.ScriptLoader).ModulePaths = new[] { Path.Combine(RootLibScriptDir, "?"), Path.Combine(RootLibScriptDir, "?.lua") };
                 ApiHandler.AddApi(script);
 
