@@ -6,6 +6,7 @@ using LeagueSharp.Common;
 using LuaSharp.Core.API;
 using MoonSharp.Interpreter;
 using MoonSharp.Interpreter.Loaders;
+using MoonSharp.Interpreter.REPL;
 
 namespace LuaSharp.Core
 {
@@ -26,6 +27,7 @@ namespace LuaSharp.Core
             Scripts = new List<Script>();
 
             Console.WriteLine(Directory.GetFiles(RootScriptDir).Count());
+            Script.DefaultOptions.ScriptLoader = new ReplInterpreterScriptLoader();
             foreach (var scriptFile in Directory.GetFiles(RootScriptDir))
             {
                 var script = new Script();
