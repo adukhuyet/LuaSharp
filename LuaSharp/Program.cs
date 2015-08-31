@@ -12,6 +12,12 @@ namespace LuaSharp
         private static Menu _menu;
         static void Main(string[] args)
         {
+            if (Game.Mode == GameMode.Running)
+            {
+                GameOnOnGameLoad(new EventArgs());
+                ApiHandler.OnGameLoad(new EventArgs());
+            }
+
             Game.OnStart += GameOnOnGameLoad;
 
             // Setup load event for the Lua API
