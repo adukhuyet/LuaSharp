@@ -237,7 +237,6 @@
     <Compile Include="MoonSharp.Interpreter\Platforms\PortableWrappers\Utils.cs" />
     <Compile Include="MoonSharp.Interpreter\Platforms\StandardFileType.cs" />
     <Compile Include="MoonSharp.Interpreter\Platforms\StandardPlatformAccessor.cs" />
-    <Compile Include="MoonSharp.Interpreter\Properties\AssemblyInfo.cs" />
     <Compile Include="MoonSharp.Interpreter\REPL\ReplHistoryNavigator.cs" />
     <Compile Include="MoonSharp.Interpreter\REPL\ReplInterpreter.cs" />
     <Compile Include="MoonSharp.Interpreter\REPL\ReplInterpreterScriptLoader.cs" />

@@ -33,7 +33,7 @@ namespace MoonSharp.Interpreter
         /// <summary>
         ///     Gets the type of the value.
         /// </summary>
-        public DataType Type { get; }
+        public DataType Type { get; private set; }
 
         /// <summary>
         ///     Gets the function (valid only if the <see cref="Type" /> is <see cref="DataType.Function" />)
@@ -46,7 +46,7 @@ namespace MoonSharp.Interpreter
         /// <summary>
         ///     Gets the numeric value (valid only if the <see cref="Type" /> is <see cref="DataType.Number" />)
         /// </summary>
-        public double Number { get; }
+        public double Number { get; private set; }
 
         /// <summary>
         ///     Gets the values in the tuple (valid only if the <see cref="Type" /> is Tuple).
