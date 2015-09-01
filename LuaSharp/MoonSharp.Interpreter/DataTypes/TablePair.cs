@@ -19,6 +19,11 @@
             value = val;
         }
 
+        static TablePair()
+        {
+            Nil = new TablePair(DynValue.Nil, DynValue.Nil);
+        }
+
         /// <summary>
         ///     Gets the key.
         /// </summary>
@@ -40,6 +45,6 @@
         /// <summary>
         ///     Gets the nil pair
         /// </summary>
-        public static TablePair Nil { get; } = new TablePair(DynValue.Nil, DynValue.Nil);
+        public static TablePair Nil { get; }
     }
 }

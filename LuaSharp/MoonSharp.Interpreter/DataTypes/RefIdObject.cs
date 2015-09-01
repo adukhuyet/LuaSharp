@@ -10,13 +10,18 @@
     {
         private static int s_RefIDCounter;
 
+        public RefIdObject()
+        {
+            ReferenceID = ++s_RefIDCounter;
+        }
+
         /// <summary>
         ///     Gets the reference identifier.
         /// </summary>
         /// <value>
         ///     The reference identifier.
         /// </value>
-        public int ReferenceID { get; } = ++s_RefIDCounter;
+        public int ReferenceID { get; }
 
         /// <summary>
         ///     Formats a string with a type name and a ref-id

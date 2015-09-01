@@ -14,6 +14,11 @@ namespace MoonSharp.Interpreter
         // Fields are internal - direct access by the executor was a 10% improvement at profiling here!
         internal SymbolRefType i_Type;
 
+        static SymbolRef()
+        {
+            DefaultEnv = new SymbolRef {i_Type = SymbolRefType.DefaultEnv};
+        }
+
         /// <summary>
         ///     Gets the type of this symbol reference
         /// </summary>
@@ -49,7 +54,7 @@ namespace MoonSharp.Interpreter
         /// <summary>
         ///     Gets the default _ENV.
         /// </summary>
-        public static SymbolRef DefaultEnv { get; } = new SymbolRef {i_Type = SymbolRefType.DefaultEnv};
+        public static SymbolRef DefaultEnv { get; }
 
         /// <summary>
         ///     Creates a new symbol reference pointing to a global var
