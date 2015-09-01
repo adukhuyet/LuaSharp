@@ -24,11 +24,16 @@ namespace MoonSharp.Interpreter
             False = NewBoolean(false).AsReadOnly();
         }
 
+        public DynValue()
+        {
+            ReferenceID = ++s_RefIDCounter;
+        }
+
         /// <summary>
         ///     Gets a unique reference identifier. This is guaranteed to be unique only for dynvalues created in a single thread
         ///     as it's not thread-safe.
         /// </summary>
-        public int ReferenceID { get; } = ++s_RefIDCounter;
+        public int ReferenceID { get; }
 
         /// <summary>
         ///     Gets the type of the value.
